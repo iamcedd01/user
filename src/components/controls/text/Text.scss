@@ -1,0 +1,65 @@
+@import '../../../styles/globals/mixins';
+
+%text {
+    @apply my-2 mx-0;
+    @apply px-0 py-0.5;
+    @apply text-left;
+
+    &.cs-bold {
+        @apply font-bold;
+    }
+
+    &.cs-italic {
+        @apply italic;
+    }
+
+    &.cs-underline {
+        @apply underline;
+    }
+
+    &.cs-uppercase {
+        @apply uppercase;
+    }
+
+    &.cs-centered {
+        text-align: center;
+    }
+
+    @include generate-colors;
+}
+
+.cs-text {
+    @extend %text;
+    @apply text-lg;
+}
+
+.cs-link {
+    @extend %text;
+    @apply text-lg;
+
+    .cs-link-icon {
+        @apply mr-0.5;
+    }
+}
+
+.cs-title {
+    @extend %text;
+    @apply font-primary;
+    @apply text-secondary;
+
+    h1 {
+        @apply text-5xl md:text-4xl sm:text-3xl xs:text-3xl;
+    }
+
+    h2 {
+        @apply text-4xl md:text-3xl sm:text-2xl xs:text-2xl;
+    }
+
+    h3 {
+        @apply text-3xl md:text-2xl sm:text-2xl xs:text-2xl;
+    }
+
+    h6 {
+        @apply text-xl;
+    }
+}

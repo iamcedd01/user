@@ -1,0 +1,41 @@
+@mixin generate-widths() {
+    $base: 12;
+
+    @for $i from 1 through 12 {
+        $value: calc($i / $base) * 100%;
+
+        &.cs-width-#{$i} {
+            @apply w-column-#{$i};
+        }
+
+        &.cs-xs-width-#{$i} {
+            @apply xs:w-column-#{$i} #{!important};
+        }
+
+        &.cs-sm-width-#{$i} {
+            @apply sm:w-column-#{$i} #{!important};
+        }
+
+        &.cs-md-width-#{$i} {
+            @apply md:w-column-#{$i} #{!important};
+        }
+
+        &.cs-lg-width-#{$i} {
+            @apply lg:w-column-#{$i} #{!important};
+        }
+
+        &.cs-xl-width-#{$i} {
+            @apply xl:w-column-#{$i} #{!important};
+        }
+    }
+}
+
+@mixin generate-colors() {
+    $colors: ('primary', 'secondary', 'primaryDark', 'secondaryDark', 'general', 'neutral', 'white');
+
+    @each $color in $colors {
+        &.cs-color-#{$color} {
+            @apply text-#{$color};
+        }
+    }
+}

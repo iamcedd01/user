@@ -1,0 +1,18 @@
+.cs-button {
+    @apply my-4 px-6 py-2 #{!important};
+    @apply text-lg #{!important};
+
+    &.cs-primary {
+        @apply text-white;
+        @apply bg-primary hover:bg-primaryDark;
+    }
+
+    &.cs-secondary {
+        @apply text-white;
+        @apply bg-secondary hover:bg-secondaryDark;
+    }
+
+    &.cs-centered {
+        @apply flex mx-auto;
+    }
+}

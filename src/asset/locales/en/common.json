@@ -1,0 +1,7 @@
+{
+    "LBL_WELCOME_USER": "Welcome, {{name}}",
+    "LBL_FETCHING_USER": "Fetching user details...",
+    "LBL_USER_EMAIL": "Your email address is {{email}}",
+
+    "BTN_REFRESH": "Refresh"
+}

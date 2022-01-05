@@ -1,0 +1,50 @@
+@import '../../../styles/globals/mixins';
+
+.cs-section {
+    @apply py-20 px-10 mx-0;
+    @apply w-full relative;
+
+    &.cs-fluid {
+        @apply p-0;
+    }
+
+    &.cs-compact {
+        @apply py-14;
+    }
+
+    &.cs-centered {
+        .cs-wrapper {
+            @apply items-center;
+        }
+    }
+
+    .cs-wrapper {
+        @apply my-0 mx-auto;
+        @apply flex w-full relative;
+
+        max-width: 1360px;
+
+        > .cs-section-column {
+            padding-left: 0.75%;
+            padding-right: 0.75%;
+
+            &:not(:only-child) {
+                &:first-child {
+                    @apply pl-0;
+                    padding-right: 1.5%;
+                }
+
+                &:last-child {
+                    @apply pr-0;
+                    padding-left: 1.5%;
+                }
+            }
+
+            &:only-child {
+                @apply px-0 #{!important};
+            }
+
+            @include generate-widths;
+        }
+    }
+}
