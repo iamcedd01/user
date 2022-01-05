@@ -2,6 +2,10 @@
 
 ## Available Scripts
 
+### `npm install`
+
+Install packages needed for the application
+
 ### `npm start`
 
 Runs the app in the development mode.\
