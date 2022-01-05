@@ -1,16 +1,18 @@
 import { FC, Fragment, useCallback, useEffect, useState } from 'react';
 // COMPONENTS - CONTROLS
-import Page from 'components/general/page/Page';
+import Text from 'components/controls/text/Text';
 import Title from 'components/controls/text/Title';
 import Button from 'components/controls/button/Button';
 import Section from 'components/controls/section/Section';
 import SectionColumn from 'components/controls/section/SectionColumn';
 // COMPONENTS - GENERAL
+import Page from 'components/general/page/Page';
 
-import styles from './LandingPage.scss';
+// UTILS
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
-import Text from 'components/controls/text/Text';
+
+import styles from './LandingPage.scss';
 
 const LandingPage: FC = () => {
     const { t } = useTranslation();
@@ -45,6 +47,10 @@ const LandingPage: FC = () => {
     useEffect(() => {
         fetchUser();
     }, [fetchUser]);
+
+    useEffect(() => {
+        return () => localStorage.clear();
+    }, []);
 
     return (
         <Page name="landing" className={styles.csLandingPage}>
