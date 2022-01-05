@@ -72,7 +72,7 @@ const LandingPage: FC = () => {
                             </Title>
                         </Fragment>
                     )}
-                    <Button centered text="BTN_REFETCH_USER" onClick={handleRefetch} disabled={fetching} />
+                    <Button centered text="BTN_REFRESH" onClick={handleRefetch} disabled={fetching} />
                 </SectionColumn>
             </Section>
         </Page>
